@@ -1,0 +1,16 @@
+@import 'tailwindcss';
+
+@keyframes zoomInEffect {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+@theme {
+    --color-uma-green-200: oklch(93.59% 0.0661 181.98);
+    --color-uma-green-300: oklch(89.9% 0.1157 180.34);
+    --color-uma-green-400: oklch(83.76% 0.1558 175.03);
+}
