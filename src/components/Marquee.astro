@@ -1,0 +1,41 @@
+---
+const { class: className } = Astro.props
+---
+
+<div class={`${className} marquee`}>
+    <div class="marquee-content">
+        <slot />
+    </div>
+</div>
+
+<style>
+    @keyframes marquee {
+        0% {
+            transform: translate3d(var(--move-initial), 0, 0);
+        }
+
+        100% {
+            transform: translate3d(var(--move-final), 0, 0);
+        }
+    }
+
+    .marquee {
+        position: relative;
+        overflow: hidden;
+        --offset: 20vw;
+        --move-initial: calc(-25% + var(--offset));
+        --move-final: calc(-50% + var(--offset));
+    }
+
+    .marquee-content {
+        width: fit-content;
+        display: flex;
+        position: relative;
+        white-space: nowrap;
+        will-change: transform;
+        transform: translate3d(var(--move-initial), 0, 0);
+        animation: marquee 10s linear infinite;
+        font-size: 10vw;
+        text-transform: uppercase;
+    }
+</style>
