@@ -1,0 +1,50 @@
+---
+import Marquee from '../Marquee.astro'
+---
+
+<section
+    class="relative isolate overflow-hidden bg-gradient-to-b from-sky-600 to-sky-400">
+    <div class="px-6 py-24 sm:px-6 sm:py-32 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+            <h2
+                class="text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+                Take the first step toward your bright healthcare future today.
+            </h2>
+            <p class="mx-auto mt-6 max-w-xl text-pretty text-lg/8 text-white">
+                Enroll today and start your journey in healthcare. Gain
+                essential skills, knowledge, and hands-on experience to build a
+                rewarding career and make a difference.
+            </p>
+            <div class="mt-10 flex items-center justify-center gap-x-6">
+                <a
+                    href="#"
+                    class="bg-uma-green-400 px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:-translate-y-1 transition-transform hover:translate-x-1 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+                    Get started
+                </a>
+            </div>
+        </div>
+    </div>
+    <svg
+        viewBox="0 0 1024 1024"
+        aria-hidden="true"
+        class="absolute ooef left-1/2 top-1/2 -z-10 size-[64rem] -translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)]">
+        <circle
+            r={512}
+            cx={512}
+            cy={512}
+            fill="url(#8d958450-c69f-4251-94bc-4e091a323369)"
+            fill-opacity="1"></circle>
+        <defs>
+            <radialGradient id="8d958450-c69f-4251-94bc-4e091a323369">
+                <stop stop-color="#fff"></stop>
+                <stop offset={1} stop-color="#fff"></stop>
+            </radialGradient>
+        </defs>
+    </svg>
+    <Marquee class="text-white">
+        <span class="px-[2vw]">Ultimate Medical Academy</span>
+        <span class="px-[2vw]">Ultimate Medical Academy</span>
+        <span class="px-[2vw]">Ultimate Medical Academy</span>
+        <span class="px-[2vw]">Ultimate Medical Academy</span>
+    </Marquee>
+</section>

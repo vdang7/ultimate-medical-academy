@@ -1,0 +1,40 @@
+---
+import { BackgroundCarousel } from '../BackgroundCarousel.jsx'
+import Container from '../Container.astro'
+import UMALogo from '../UMALogo.astro'
+---
+
+<section class="relative isolate [clip-path:inset(0)]">
+    <BackgroundCarousel client:load />
+    <div class="absolute inset-0 -z-10 bg-gradient-to-tr from-black/40"></div>
+    <Container class="pb-28 pt-9">
+        <UMALogo class="mb-20 h-auto w-40" />
+        <div class="-mx-2 font-medium text-sky-200 min-[480px]:hidden">
+            <div class="flex items-end">
+                <div class="text-[65vw] leading-[53vw] text-white">
+                    <span class="block">20</span>
+                    <span class="block">24</span>
+                </div>
+                <span class="text-[15vw] leading-none">in</span>
+            </div>
+            <span class="block text-[32vw] leading-[20vw]"> review </span>
+        </div>
+        <div class="hidden font-medium text-sky-200 min-[480px]:block">
+            <div class="flex items-end justify-end">
+                <span
+                    class="text-[36vw] leading-[29vw] tracking-tighter text-white lg:text-[40.5vw] xl:text-[518.4px] xl:leading-[371.2px]">
+                    2024
+                </span>
+
+                <span
+                    class="ml-3 text-[7vw] leading-none lg:ml-10 xl:text-[89.6px]">
+                    in
+                </span>
+            </div>
+            <span
+                class="block text-right text-[13vw] leading-[10vw] xl:text-[166.783px] xl:leading-[128.3px]">
+                review
+            </span>
+        </div>
+    </Container>
+</section>

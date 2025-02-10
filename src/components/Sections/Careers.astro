@@ -1,0 +1,117 @@
+---
+import { Image } from 'astro:assets'
+import imagePortrait2 from '../../assets/images/graduation-portrait-2.webp'
+import imagePortrait3 from '../../assets/images/graduation-portrait-3.webp'
+import imagePortrait4 from '../../assets/images/graduation-portrait-4.jpg'
+import imagePortrait from '../../assets/images/graduation-portrait.webp'
+import imageFeatured from '../../assets/images/graduation-walk.webp'
+import ArrowUpRightIcon from '../ArrowUpRightIcon.astro'
+import Container from '../Container.astro'
+
+const featuredPost = {
+    id: 1,
+    title: "How Grace started her career at St. Luke's Hospital",
+    href: '#',
+    imageSrc: imageFeatured,
+    imageAlt: 'Graduation walk',
+}
+
+const posts = [
+    {
+        id: 1,
+        title: 'How Lia started her career at Unity',
+        href: '#',
+        imageSrc: imagePortrait2,
+        imageAlt: 'Graduation portrait',
+    },
+    {
+        id: 1,
+        title: 'How Mia started her career at Sentara',
+        href: '#',
+        imageSrc: imagePortrait3,
+        imageAlt: 'Graduation portrait',
+    },
+    {
+        id: 1,
+        title: 'How Joy started her career at Hartford',
+        href: '#',
+        imageSrc: imagePortrait,
+        imageAlt: 'Graduation portrait',
+    },
+    {
+        id: 1,
+        title: 'How Ava started her career at Evergreen',
+        href: '#',
+        imageSrc: imagePortrait4,
+        imageAlt: 'Graduation portrait',
+    },
+]
+---
+
+<section class="bg-gray-50 pb-24 sm:pb-32">
+    <Container>
+        <div class="mx-auto max-w-2xl text-center">
+            <h2 class="mb-2 text-base/7 font-semibold text-sky-700">
+                2024 Wall of Fame
+            </h2>
+            <h2
+                class="text-balance text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                Real students, real results
+            </h2>
+            <p class="mt-2 text-lg/8 text-gray-600">
+                See why professionals choose Ultimate Medical Academy
+            </p>
+        </div>
+        <div
+            class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+            <article
+                class="group relative isolate flex flex-col justify-end overflow-hidden bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80 hover:-translate-y-1 transition-transform hover:translate-x-1 ease-in-out">
+                <ArrowUpRightIcon
+                    class="absolute text-uma-green-400 w-8 h-auto top-3 right-3 z-50"
+                />
+                <Image
+                    alt={featuredPost.imageAlt}
+                    src={featuredPost.imageSrc}
+                    class="absolute inset-0 -z-10 size-full object-cover group-hover:scale-110 transition-transform ease-in-out"
+                />
+                <div
+                    class="absolute inset-0 -z-10 bg-gradient-to-t from-black/60">
+                </div>
+                <div
+                    class="absolute inset-0 -z-10 ring-1 ring-inset ring-gray-900/10">
+                </div>
+
+                <h3
+                    class="mt-3 text-balance text-3xl font-semibold text-white lg:text-5xl">
+                    <a href={featuredPost.href}>
+                        <span class="absolute inset-0"></span>
+                        {featuredPost.title}
+                    </a>
+                </h3>
+            </article>
+            <div class="grid auto-rows-fr gap-8 lg:grid-cols-2">
+                {
+                    posts.map((post) => (
+                        <article class="group relative isolate flex flex-col justify-end overflow-hidden bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:px-4 lg:pb-4 lg:pt-0 hover:-translate-y-1 transition-transform hover:translate-x-1 ease-in-out">
+                            <ArrowUpRightIcon class="absolute text-white w-8 h-auto top-3 right-3 z-50" />
+                            <Image
+                                alt={post.imageAlt}
+                                src={post.imageSrc}
+                                class="absolute inset-0 -z-10 size-full object-cover sm:object-[0%_30%] group-hover:scale-110 transition-transform ease-in-out"
+                            />
+                            <div class="absolute inset-0 -z-10 bg-gradient-to-t from-black/60" />
+                            <div class="absolute inset-0 -z-10 ring-1 ring-inset ring-gray-900/10" />
+
+                            <h3 class="mt-3 text-balance text-3xl font-semibold text-white lg:text-2xl/7">
+                                <a href={post.href}>
+                                    <span class="absolute inset-0" />
+                                    {post.title}
+                                </a>
+                            </h3>
+                        </article>
+                    ))
+                }
+            </div>
+        </div>
+    </Container>
+</section>

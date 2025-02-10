@@ -1,0 +1,51 @@
+---
+import { Image } from 'astro:assets'
+import imageStudent from '../../assets/images/student.webp'
+import Container from '../Container.astro'
+---
+
+<section class="relative isolate overflow-hidden pb-24 sm:pb-32 lg:pb-0">
+    <div class="absolute h-1/2 top-0 w-full bg-gray-50 -z-10"></div>
+    <div
+        class="absolute bottom-0 -z-10 h-[22rem] lg:h-1/2 w-full bg-gradient-to-b from-sky-300 to-sky-600">
+        <div class="w-full bg-sky-200 h-1.5 -translate-y-3 absolute"></div>
+        <div class="mt-1.5 w-full bg-gray-50 h-1.5"></div>
+    </div>
+    <div class="absolute inset-0 pattern -z-20"></div>
+    <Container>
+        <div
+            class="grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:grid-cols-2 lg:items-center">
+            <div
+                class="px-6 md:px-0 lg:bg-uma-green-400 lg:border lg:border-uma-green-200 lg:px-8 lg:pb-8 lg:pr-4 lg:pt-10">
+                <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
+                    <h2 class="text-base/7 font-semibold text-sky-900">
+                        2024 Student of the Year
+                    </h2>
+                    <p
+                        class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                        Jada demonstrated academic excellence and peer support.
+                    </p>
+                    <p class="mt-6 text-lg/8 text-sky-950">
+                        Jada consistently demonstrated academic excellence,
+                        tackling complex concepts with ease and producing
+                        top-quality work. Her dedication to her studies was
+                        reflected in her outstanding grades. Always focused and
+                        engaged, Jada’s academic achievements made her a role
+                        model for her peers.
+                    </p>
+                    <p class="mt-6 text-lg/8 text-sky-950">
+                        Jada was also a strong support system for her
+                        classmates. She regularly offered help, whether tutoring
+                        struggling peers or providing guidance on assignments.
+                        Her generosity in sharing her knowledge fostered a
+                        collaborative environment, allowing everyone to thrive
+                        together.
+                    </p>
+                </div>
+            </div>
+            <div class="sm:px-6 lg:px-0">
+                <Image src={imageStudent} alt="UMA student" />
+            </div>
+        </div>
+    </Container>
+</section>

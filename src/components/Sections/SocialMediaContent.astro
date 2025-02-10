@@ -1,0 +1,150 @@
+---
+import { Image } from 'astro:assets'
+import imageGroupPhoto from '../../assets/images/group-photo-2.webp'
+import imageParadeMarch from '../../assets/images/parade-2.webp'
+import imageParadeAudience from '../../assets/images/parade-3.webp'
+import imageProfilePicture2 from '../../assets/images/student-2.webp'
+import imageProfilePicture3 from '../../assets/images/student-3.webp'
+import imageProfilePicture from '../../assets/images/student.webp'
+import Container from '../../components/Container.astro'
+import TwitterLogo from '../../components/TwitterLogo.astro'
+import UMALogo from '../../components/UMALogo.astro'
+import Marquee from '../Marquee.astro'
+---
+
+<section class="relative isolate bg-sky-950">
+    <Marquee class="text-white">
+        <span class="px-[2vw]">2024</span>
+        <UMALogo class="w-16 h-auto" />
+        <span class="px-[2vw] text-[#052133]">2024</span>
+        <UMALogo class="w-16 h-auto" />
+        <span class="px-[2vw]">2024</span>
+        <UMALogo class="w-16 h-auto" />
+        <span class="text-[#052133] px-[2vw]">2024</span>
+        <UMALogo class="w-16 h-auto" />
+        <span class="px-[2vw]">2024</span>
+    </Marquee>
+
+    <Container class="relative">
+        <!-- TODO: Clean up -->
+        <div
+            class="absolute right-0 -z-10 size-96 translate-x-[85%] translate-y-[45%] border-2 border-sky-500 sm:translate-x-1/2 sm:translate-y-[40%]">
+            <div
+                class="absolute inset-0 ml-5 -translate-y-6 border-2 border-uma-green-400 sm:ml-10 sm:-translate-y-12 xl:hidden">
+            </div>
+        </div>
+        <div
+            class="absolute right-0 -z-10 size-96 border-2 border-uma-green-400 translate-x-[60%] translate-y-[28%] hidden xl:block">
+        </div>
+    </Container>
+    <div
+        class="absolute bottom-0 w-full bg-gray-50 h-[14.5%] min-[480px]:h-[17%] md:h-[30rem] lg:h-80 -z-10">
+        <div class="w-full h-1 bg-sky-600 translate-y-1"></div>
+        <div class="w-full h-1 bg-uma-green-400 translate-y-2"></div>
+    </div>
+    <Container class="py-24 sm:py-32">
+        <div class="mx-auto max-w-2xl lg:mx-0">
+            <h2 class="mb-2 text-base/7 font-semibold text-uma-green-400">
+                Rewind
+            </h2>
+
+            <h2
+                class="text-pretty text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+                Best of 2024
+            </h2>
+        </div>
+        <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+            <dl
+                class="mx-auto grid max-w-xl gap-x-8 space-y-8 md:max-w-none md:columns-2 lg:block lg:columns-3">
+                <div class="overflow-hidden [break-inside:avoid-column]">
+                    <Image src={imageParadeAudience} alt="parade audience" />
+                </div>
+                <figure
+                    class="bg-white p-6 [break-inside:avoid-column] border border-gray-200">
+                    <blockquote class="text-gray-900">
+                        <p>
+                            Excited to start my healthcare journey! The road
+                            ahead may be challenging, but I’m ready to learn,
+                            grow, and make a real difference.
+                        </p>
+                    </blockquote>
+                    <figcaption class="mt-6 flex items-center gap-x-4">
+                        <Image
+                            class="size-10 bg-gray-50"
+                            src={imageProfilePicture2}
+                            alt="Student profile picture"
+                        />
+                        <div>
+                            <div class="text-sm font-medium">Madison Clark</div>
+                            <div class="text-sm text-gray-600">
+                                @madisonclark
+                            </div>
+                        </div>
+                        <TwitterLogo
+                            class="ml-auto h-auto w-4 self-end text-[#1DA1F2]"
+                        />
+                    </figcaption>
+                </figure>
+                <figure
+                    class="bg-sky-800/20 border border-sky-900 p-6 [break-inside:avoid-column]">
+                    <blockquote class="text-sky-200">
+                        <p>
+                            Freshman year in healthcare is eye-opening! I’ve
+                            learned so much already and I’m eager to dive deeper
+                            into this incredible field.
+                        </p>
+                    </blockquote>
+                    <figcaption class="mt-6 flex items-center gap-x-4">
+                        <Image
+                            class="size-10 bg-gray-50"
+                            src={imageProfilePicture3}
+                            alt="Student profile picture"
+                        />
+                        <div>
+                            <div class="font-semibold text-sky-200">
+                                Grace Miller
+                            </div>
+                            <div class="text-sm text-sky-200">@gracemiller</div>
+                        </div>
+                        <TwitterLogo
+                            class="ml-auto h-auto w-4 self-end text-[#1DA1F2]"
+                        />
+                    </figcaption>
+                </figure>
+                <div
+                    class="order-[1] mt-8 lg:mt-0 overflow-hidden [break-inside:avoid-column]">
+                    <Image src={imageGroupPhoto} alt="group photo" />
+                </div>
+                <div class="overflow-hidden [break-inside:avoid-column]">
+                    <Image src={imageParadeMarch} alt="parade march" />
+                </div>
+                <figure
+                    class="bg-uma-green-400 border border-uma-green-200 p-6 [break-inside:avoid-column]">
+                    <blockquote class="text-gray-900">
+                        <p>
+                            Healthcare is my passion, and I’m excited to explore
+                            every aspect of it. Here’s to learning, growing, and
+                            helping people every day.
+                        </p>
+                    </blockquote>
+                    <figcaption class="mt-6 flex items-center gap-x-4">
+                        <Image
+                            class="size-10 bg-gray-50"
+                            src={imageProfilePicture}
+                            alt="Student profile picture"
+                        />
+                        <div>
+                            <div class="text-sm font-medium">Emily Johnson</div>
+                            <div class="text-sm text-gray-600">
+                                @emilyjohnson
+                            </div>
+                        </div>
+                        <TwitterLogo
+                            class="ml-auto h-auto w-4 self-end text-[#1DA1F2]"
+                        />
+                    </figcaption>
+                </figure>
+            </dl>
+        </div>
+    </Container>
+</section>
