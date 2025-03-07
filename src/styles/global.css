@@ -14,3 +14,7 @@
     --color-uma-green-300: oklch(89.9% 0.1157 180.34);
     --color-uma-green-400: oklch(83.76% 0.1558 175.03);
 }
+
+.pattern-square {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='Artboard-5' fill='%230c4a6e' fill-opacity='0.4' fill-rule='nonzero'%3E%3Cpath d='M6 18h12V6H6v12zM4 4h16v16H4V4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}

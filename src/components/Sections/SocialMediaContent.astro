@@ -12,6 +12,8 @@ import Marquee from '../Marquee.astro'
 ---
 
 <section class="relative isolate bg-sky-950">
+    <div class="absolute inset-0 pattern-square opacity-30 bg-fixed -z-10"></div>
+
     <Marquee class="text-white">
         <span class="px-[2vw]">2024</span>
         <span class="px-[2vw] text-[#052133]">2024</span>
@@ -35,7 +37,7 @@ import Marquee from '../Marquee.astro'
     </Container>
     <div
         class="absolute bottom-0 w-full bg-gray-50 h-[14.5%] min-[480px]:h-[17%] md:h-[30rem] lg:h-80 -z-10">
-        <div class="w-full h-1 bg-sky-600 translate-y-1"></div>
+        <div class="w-full h-1 bg-sky-400 translate-y-1"></div>
         <div class="w-full h-1 bg-uma-green-400 translate-y-2"></div>
     </div>
     <Container class="py-24 sm:py-32">
@@ -45,8 +47,9 @@ import Marquee from '../Marquee.astro'
             </h2>
 
             <h2
-                class="text-pretty text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+                class="text-pretty text-4xl font-semibold tracking-tight text-white sm:text-5xl relative">
                 Best of 2024
+                <span class="absolute left-0 text-[15rem] -translate-y-10 text-sky-900/30 -z-10">Best</span>
             </h2>
         </div>
         <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
@@ -82,8 +85,8 @@ import Marquee from '../Marquee.astro'
                     </figcaption>
                 </figure>
                 <figure
-                    class="bg-sky-800/20 border border-sky-900 p-6 [break-inside:avoid-column]">
-                    <blockquote class="text-sky-200">
+                    class="bg-uma-green-400 border border-uma-green-200 p-6 [break-inside:avoid-column]">
+                    <blockquote class="text-green-900">
                         <p>
                             Freshman year in healthcare is eye-opening! I’ve
                             learned so much already and I’m eager to dive deeper
@@ -97,10 +100,10 @@ import Marquee from '../Marquee.astro'
                             alt="Student profile picture"
                         />
                         <div>
-                            <div class="font-semibold text-sky-200">
+                            <div class="font-semibold text-gray-900">
                                 Grace Miller
                             </div>
-                            <div class="text-sm text-sky-200">@gracemiller</div>
+                            <div class="text-sm text-gray-900">@gracemiller</div>
                         </div>
                         <TwitterLogo
                             class="ml-auto h-auto w-4 self-end text-[#1DA1F2]"
@@ -115,8 +118,8 @@ import Marquee from '../Marquee.astro'
                     <Image src={imageParadeMarch} alt="parade march" />
                 </div>
                 <figure
-                    class="bg-uma-green-400 border border-uma-green-200 p-6 [break-inside:avoid-column]">
-                    <blockquote class="text-gray-900">
+                    class="bg-sky-900 border border-sky-800 p-6 [break-inside:avoid-column]">
+                    <blockquote class="text-sky-200">
                         <p>
                             Healthcare is my passion, and I’m excited to explore
                             every aspect of it. Here’s to learning, growing, and
@@ -130,8 +133,8 @@ import Marquee from '../Marquee.astro'
                             alt="Student profile picture"
                         />
                         <div>
-                            <div class="text-sm font-medium">Emily Johnson</div>
-                            <div class="text-sm text-gray-600">
+                            <div class="text-sm font-medium text-sky-200">Emily Johnson</div>
+                            <div class="text-sm text-sky-200">
                                 @emilyjohnson
                             </div>
                         </div>
